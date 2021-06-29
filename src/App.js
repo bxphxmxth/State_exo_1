@@ -41,6 +41,35 @@ state = {
 
 }
 
+change (){
+
+  this.setState({
+    perso1 : {
+      prenom:"Bernadette",
+      nom: "Bruce",
+      age: 52,
+
+    },
+
+    perso2 : {
+      prenom:"Henri",
+      nom: "De la street",
+      age: 2,
+
+    },
+
+    perso3 : {
+      prenom:"Cho",
+      nom: "Patate",
+      age: 86,
+
+    },
+  })
+
+}
+
+
+
 render(){
 
 
@@ -48,7 +77,7 @@ render(){
     <div className="App">
       
     <Personnages/>
-    <Persos statut={this.state}/>
+    <Persos blup={() => this.change()} statut={this.state}/>
     </div>
   );
 }
